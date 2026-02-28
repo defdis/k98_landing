@@ -80,8 +80,8 @@ export default {
         startPixelEmission() {
             this.pixelInterval = setInterval(() => {
                 this.emitPixels()
-            }, 15000)
-            
+            }, 3000)
+
             window.addEventListener('click', () => {
                 this.emitPixels()
             })
@@ -89,15 +89,11 @@ export default {
         emitPixels() {
             const container = this.$refs.pixelContainer
             if (!container) return
-            
+
             const mouseX = this.lastMouseX || window.innerWidth / 2
             const mouseY = this.lastMouseY || window.innerHeight / 2
-            
+
             this.createPixel(container, mouseX, mouseY)
-            
-            setTimeout(() => {
-                container.innerHTML = ''
-            }, 3000)
         },
         createPixel(container, startX, startY) {
             const pixel = document.createElement('div')
