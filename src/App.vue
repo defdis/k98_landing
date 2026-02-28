@@ -99,7 +99,16 @@ export default {
             const pixel = document.createElement('div')
             pixel.className = 'pixel'
 
-            const colors = ['#ff6b6b', '#4ecdc4', '#ffe66d', '#95e1d3', '#f38181', '#aa96da', '#fcbad3', '#a8d8ea']
+            const colors = [
+                '#d11010',
+                '#02bd24',
+                '#ffd800',
+                '#06458a',
+                '#f66600',
+                '#6d41df',
+                '#ef005e',
+                '#0079f1'
+            ]
             const color = colors[Math.floor(Math.random() * colors.length)]
             pixel.style.background = color
 
